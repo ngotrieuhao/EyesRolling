@@ -12,8 +12,8 @@ document.addEventListener("mousemove", (e) => {
 });
 
 document.addEventListener("touchmove", (e) => {
-  var x = (e.clientX * 100) / window.innerWidth + "%";
-  var y = (e.clientY * 100) / window.innerHeight + "%";
+  var x = (e.changedTouches[0].clientX * 100) / window.innerWidth + "%";
+  var y = (e.changedTouches[0].clientY * 100) / window.innerHeight + "%";
 
   for (var i = 0; i < 2; i++) {
     balls[i].style.left = x;
