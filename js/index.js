@@ -28,18 +28,16 @@ var audio = document.getElementById("audio");
 var playPauseBtn = document.getElementById("playPauseBtn");
 var muteBtn = document.getElementById("mute");
 var count = 0;
-window.onload = () => {
-  audio.play();
-};
 function playPause() {
   if (count == 0) {
     count = 1;
-    audio.pause();
-    playPauseBtn.innerHTML = "&#9658;";
-  } else {
-    count = 0;
     audio.play();
     playPauseBtn.innerHTML = "&#10074;&#10074;";
+  } else {
+    count = 0;
+
+    audio.pause();
+    playPauseBtn.innerHTML = "&#9658;";
   }
 }
 
