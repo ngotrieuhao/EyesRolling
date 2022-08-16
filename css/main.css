@@ -12,6 +12,7 @@
 }
 body {
   background: #fff;
+  overflow: hidden;
 }
 .wrapp__character {
   margin-top: 4rem;
@@ -306,11 +307,14 @@ body {
 button#mute {
   position: absolute;
   right: 1rem;
-  background: url(/img/speaker.png) no-repeat;
+  background: url(../img/speaker.png) no-repeat;
   width: 2rem;
   height: 2rem;
   cursor: pointer;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   border-radius: 50%;
   border: none;
   top: 7px;
