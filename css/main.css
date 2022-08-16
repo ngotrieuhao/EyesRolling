@@ -296,13 +296,103 @@ body {
 }
 
 /* ==== Button Back HOME ==== */
+.wrapp__audio {
+  padding-top: 1rem;
+  float: right;
+  margin-right: 4rem;
+  position: relative;
+  width: 10%;
+}
+button#mute {
+  position: absolute;
+  right: 1rem;
+  background: url(/img/speaker.png) no-repeat;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  background-size: cover;
+  border-radius: 50%;
+  border: none;
+  top: 7px;
+}
+button#playPauseBtn {
+  top: 0;
+  cursor: pointer;
+  position: absolute;
+  left: 1rem;
+  font-size: 22px;
+  height: 3rem;
+  width: 4rem;
+  border-radius: 50%;
+  background: radial-gradient(#15abea 60%, rgba(255, 255, 255, 1) 62%);
+  box-shadow: 0px 0px 25px 3px #15abea;
+  border: none;
+  color: #fff;
+}
+button#playPauseBtn:before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation: pulsate1 2s;
+  animation: pulsate1 2s;
+  -webkit-animation-direction: forwards;
+  animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.75);
+  top: -35%;
+  left: -35%;
+  background: rgba(198, 16, 0, 0);
+}
+
+@-webkit-keyframes pulsate1 {
+  0% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 1;
+    box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75),
+      0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+    box-shadow: none;
+  }
+}
+
+@keyframes pulsate1 {
+  0% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 1;
+    box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75),
+      0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1);
+    opacity: 0;
+    box-shadow: none;
+  }
+}
 
 span.back--text {
   z-index: 100;
   font-size: 16px;
 }
-
-button {
+audio.character--music {
+  float: right;
+}
+.character__btn--back {
+  float: left;
   border: 0;
   position: relative;
   min-width: var(--width);
@@ -319,19 +409,19 @@ button {
   align-items: center;
   margin: 0 1rem;
 }
-button .text,
-button .icon-container {
+.character__btn--back .text,
+.character__btn--back .icon-container {
   position: relative;
   z-index: 2;
 }
-button .icon-container {
+.character__btn--back .icon-container {
   position: relative;
   width: var(--icon-size);
   height: var(--icon-size);
   margin-left: 15px;
   transition: transform 500ms ease;
 }
-button .icon-container .icon {
+.character__btn--back .icon-container .icon {
   position: absolute;
   left: 0;
   top: 0;
@@ -340,7 +430,7 @@ button .icon-container .icon {
   transition: transform 500ms ease, opacity 250ms ease;
 }
 
-button .icon-container .icon--right {
+.character__btn--back .icon-container .icon--right {
   right: 10px;
   font-size: 20px;
   top: 0px;
@@ -349,7 +439,7 @@ button .icon-container .icon--right {
 
   transition: all 0.5s ease-out;
 }
-button .icon-container .icon--left {
+.character__btn--back .icon-container .icon--left {
   font-size: 20px;
   top: 0px;
   left: auto;
@@ -357,7 +447,7 @@ button .icon-container .icon--left {
   opacity: 0;
   transition: all 0.5s ease-out;
 }
-button::after {
+.character__btn--back::after {
   content: "";
   position: absolute;
   left: 0;
@@ -369,17 +459,17 @@ button::after {
   z-index: 1;
   transition: transform 500ms ease;
 }
-button:hover::after {
+.character__btn--back:hover::after {
   transform: translateX(-63%);
 }
-/* button:hover .icon-container {
+/* .character__btn--back:hover .icon-container {
   transform: translateX(60%);
 } */
-button:hover .icon-container .icon--left {
+.character__btn--back:hover .icon-container .icon--left {
   transform: translateX(-180%);
   opacity: 1;
 }
-button:hover .icon-container .icon--right {
+.character__btn--back:hover .icon-container .icon--right {
   transform: translateX(-150%);
   opacity: 0;
 }
@@ -387,23 +477,43 @@ button:hover .icon-container .icon--right {
 /* ==== RESPONSIVE ==== */
 @media only screen and (min-width: 360px) and (max-width: 767px) {
   .wrapp__character {
-    margin-top: 2rem;
+    overflow: hidden;
+    margin-top: 1rem;
   }
-  button.character__btn--back {
+  .wrapp__audio {
+    width: 20%;
+    margin-right: 1rem;
+  }
+  button#playPauseBtn {
+    position: initial;
+  }
+  button#mute {
+    position: initial;
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+  button#playPauseBtn:before {
+    width: 90%;
+    height: 45%;
+    top: 8%;
+    left: -11%;
+  }
+  .character__btn--back.character__btn--back {
+    margin-top: 1rem;
     min-width: 40%;
     min-height: 45px;
   }
-  button .icon-container .icon--left {
+  .character__btn--back .icon-container .icon--left {
     transform: translateX(0%);
   }
-  button:hover .icon-container .icon--left {
+  .character__btn--back:hover .icon-container .icon--left {
     transform: translateX(-140%);
   }
   .lists__character {
     justify-content: center;
   }
   .character {
-    margin-top: 8rem;
+    margin-top: 10rem;
     width: 75%;
   }
   .character#characternobita {
@@ -427,10 +537,10 @@ button:hover .icon-container .icon--right {
 
   /* ==== Eyes Head Detail ==== */
   .eye#doraemon {
-    width: 65px;
-    height: 77px;
-    bottom: 59px;
-    border: 3px solid #000;
+    width: 67px;
+    height: 82px;
+    bottom: 64px;
+    border: 2px solid #000;
     margin: -2px;
   }
   .eye#nobita {

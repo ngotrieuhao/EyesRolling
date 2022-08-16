@@ -25,20 +25,36 @@
     <!-- ==== Eyes Rolling ==== -->
 
     <div class="wrapp__character">
-      <button
-        onclick="window.location.href='./index.html'"
-        class="character__btn--back"
-      >
-        <div class="icon-container">
-          <div class="icon icon--left">
-            <i class="fa-solid fa-arrow-left-long"></i>
+      <div class="wrapp__character--header">
+        <!-- Button Back -->
+
+        <button
+          onclick="window.location.href='./index.html'"
+          class="character__btn--back"
+        >
+          <div class="icon-container">
+            <div class="icon icon--left">
+              <i class="fa-solid fa-arrow-left-long"></i>
+            </div>
+            <div class="icon icon--right">
+              <i class="fa-solid fa-arrow-left-long"></i>
+            </div>
           </div>
-          <div class="icon icon--right">
-            <i class="fa-solid fa-arrow-left-long"></i>
-          </div>
+          <span class="back--text">Back</span>
+        </button>
+        <!------------------>
+        <div class="wrapp__audio">
+          <audio class="character--music" id="audio" autoplay>
+            <source src="./music/mrbean.mp3" type="audio/mpeg" />
+          </audio>
+          <button id="playPauseBtn" onclick="playPause()">
+            &#10074;&#10074;
+          </button>
+          <button class="character--mute" id="mute" onclick="mute()"></button>
         </div>
-        <span class="back--text">Back</span>
-      </button>
+        <!-- Music Cartoon -->
+      </div>
+
       <div class="character" id="charactermrbean">
         <img src="./img/mrbean.png" alt="Mr.Bean" />
 
