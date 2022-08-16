@@ -19,27 +19,24 @@ body {
 }
 
 /* -=-=-=-=-= Eyes Character =-=-=-=-=- */
+.eye {
+  background: #fff;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
 .eye#doraemon {
   width: 145px;
   height: 175px;
-  background: #fff;
-  display: inline-block;
   margin: -4px;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
   bottom: 136px;
   border: 4px solid #000;
 }
 .eye#nobita {
   width: 120px;
   height: 136px;
-  background: #fff;
-  display: inline-block;
   margin: -3px;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
   left: 11px;
   bottom: 12px;
   border: 2px solid #000;
@@ -47,50 +44,146 @@ body {
 .eye#minion {
   width: 172px;
   height: 180px;
-  background: #fff;
-  display: inline-block;
   margin: 12px;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
   left: -17px;
   bottom: 7px;
   border: 2px solid #7e838b;
 }
+.eye#mrbean {
+  width: 116px;
+  height: 119px;
+  margin: 33px;
+  left: -10px;
+  bottom: 2px;
+  border: 5px solid #000;
+}
+.eye#jerry1 {
+  width: 60px;
+  height: 103px;
+  left: -32px;
+  bottom: 36px;
+  border: 4px solid #000;
+  transform: rotate(350deg);
+}
+.eye#jerry2 {
+  width: 60px;
+  height: 98px;
+  left: 2px;
+  bottom: 38px;
+  border: 4px solid #000;
+  transform: rotate(10deg);
+}
+.eye#tom1 {
+  width: 50px;
+  height: 122px;
+  left: -15px;
+  bottom: 27px;
+  border: 0px solid #000;
+  background-color: #ffff99;
+  transform: rotate(355deg);
+}
+.eye#tom2 {
+  width: 51px;
+  height: 122px;
+  left: 16px;
+  bottom: 25px;
+  background: #ffff99;
+  border: 0px solid #000;
+  transform: rotate(7deg);
+}
+.eye#pikachu1 {
+  width: 66px;
+  height: 78px;
+  left: -69px;
+  bottom: -79px;
+  transform: rotate(10deg);
+  background: #000;
+}
+.eye#pikachu2 {
+  width: 67px;
+  height: 76px;
+  left: 66px;
+  bottom: -80px;
+  background: #000;
+  transform: rotate(354deg);
+}
+.eye#panther {
+  width: 83px;
+  height: 80px;
+  margin: 25px;
+  left: 4px;
+  bottom: 85px;
+  background: #faee33;
+}
 
 /* -=-=-=-=-= EyesBall Character =-=-=-=-=- */
 .eye__ball {
-  width: 40px;
-  height: 40px;
   background: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: 15px solid #333;
+}
+.eye__ball#balldoraemon {
+  width: 35px;
+  height: 35px;
+  border: 13px solid #333;
 }
 .eye__ball#ballnobita {
   width: 28px;
   height: 35px;
-  background: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
   border: 11px solid #333;
 }
 .eye__ball#ballminion {
   width: 55px;
   height: 60px;
-  background: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
   border: 20px solid #333;
+}
+.eye__ball#ballmrbean {
+  width: 30px;
+  height: 31px;
+  border: 18px solid #333;
+}
+.eye__ball#balljerry {
+  width: 10px;
+  height: 35px;
+  border: 12px solid #333;
+}
+.eye__ball#balljerry::before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 6px;
+  height: 7px;
+  top: -8px;
+  left: -3px;
+  border-radius: 50%;
+}
+.eye__ball#balltom {
+  width: 25px;
+  height: 60px;
+  border: 1px solid #000;
+  background: #bfff02;
+}
+.eye__ball#balltom::before {
+  content: "";
+  position: absolute;
+  background: #000;
+  width: 15px;
+  height: 25px;
+  top: 17px;
+  left: 4px;
+  border-radius: 50%;
+}
+.eye__ball#ballpikachu {
+  width: 25px;
+  height: 25px;
+}
+.eye__ball#ballpanther {
+  width: 30px;
+  height: 30px;
+  background: #000;
 }
 
 /* Doraemon */
@@ -208,7 +301,24 @@ body {
   .character#characternobita {
     width: 100%;
   }
-  .eye {
+  .character#charactermrbean {
+    width: 90%;
+  }
+  .character#characterjerry {
+    width: 100%;
+  }
+  .character#charactertom {
+    width: 100%;
+  }
+  .character#characterpikachu {
+    width: 100%;
+  }
+  .character#characterpanther {
+    width: 100%;
+  }
+
+  /* ==== Eyes Head Detail ==== */
+  .eye#doraemon {
     width: 65px;
     height: 77px;
     bottom: 59px;
@@ -228,10 +338,72 @@ body {
     bottom: 2px;
     margin: 2px;
   }
+  .eye#mrbean {
+    width: 62px;
+    height: 61px;
+    left: -5px;
+    bottom: 0px;
+    margin: 17px;
+    border: 3px solid #000;
+  }
+  .eye#jerry1 {
+    width: 32px;
+    height: 60px;
+    left: -20px;
+    bottom: 20px;
+    border: 3px solid #000;
+  }
+  .eye#jerry2 {
+    width: 32px;
+    height: 58px;
+    left: 2px;
+    bottom: 20px;
+    border: 3px solid #000;
+  }
+  .eye#tom1 {
+    width: 31px;
+    height: 71px;
+    left: -9px;
+    bottom: 16px;
+    transform: rotate(354deg);
+  }
+  .eye#tom2 {
+    width: 29px;
+    height: 71px;
+    left: 8px;
+    bottom: 16px;
+    transform: rotate(11deg);
+  }
+  .eye#pikachu1 {
+    width: 41px;
+    height: 45px;
+    left: -39px;
+    bottom: -47px;
+  }
+  .eye#pikachu2 {
+    width: 41px;
+    height: 45px;
+    left: 37px;
+    bottom: -47px;
+  }
+  .eye#panther {
+    width: 45px;
+    height: 46px;
+    margin: 16px;
+    left: 3px;
+    bottom: 50px;
+  }
+
+  /* ==== Eyes Ball Character ==== */
   .eye__ball {
     width: 16px;
     height: 16px;
     border: 6px solid #333;
+  }
+  .eye__ball#balldoraemon {
+    width: 17px;
+    height: 17px;
+    border: 7px solid #333;
   }
   .eye__ball#ballnobita {
     width: 16px;
@@ -242,6 +414,36 @@ body {
     width: 24px;
     height: 27px;
     border: 8px solid #333;
+  }
+  .eye__ball#ballmrbean {
+    width: 15px;
+    height: 15px;
+    border: 8px solid #333;
+  }
+  .eye__ball#balljerry {
+    width: 10px;
+    height: 25px;
+    border: 8px solid #333;
+  }
+  .eye__ball#balltom {
+    width: 15px;
+    height: 35px;
+  }
+  .eye__ball#balltom::before {
+    width: 7px;
+    height: 15px;
+    top: 9px;
+    left: 3px;
+  }
+  .eye__ball#ballpikachu {
+    width: 15px;
+    height: 15px;
+    border: 0;
+  }
+  .eye__ball#ballpanther {
+    width: 20px;
+    height: 20px;
+    border: 0;
   }
 }
 
