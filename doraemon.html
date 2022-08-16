@@ -18,13 +18,34 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href='https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap"rel="stylesheet'
+    />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <!-- ==== Eyes Rolling ==== -->
 
     <div class="wrapp__character">
+      <button
+        onclick="window.location.href='./index.html'"
+        class="character__btn--back"
+      >
+        <div class="icon-container">
+          <div class="icon icon--left">
+            <i class="fa-solid fa-arrow-left-long"></i>
+          </div>
+          <div class="icon icon--right">
+            <i class="fa-solid fa-arrow-left-long"></i>
+          </div>
+        </div>
+        <span class="back--text">Back</span>
+      </button>
       <div class="character">
         <img src="./img/doraemon.png" alt="Doraemon" />
 
