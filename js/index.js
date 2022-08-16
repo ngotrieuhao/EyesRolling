@@ -23,10 +23,14 @@ document.addEventListener("touchmove", (e) => {
 });
 
 /* -=-=-=-=-=-= Audio =-=-=-=-=-=- */
+
 var audio = document.getElementById("audio");
 var playPauseBtn = document.getElementById("playPauseBtn");
 var muteBtn = document.getElementById("mute");
 var count = 0;
+window.onload = () => {
+  audio.play();
+};
 function playPause() {
   if (count == 0) {
     count = 1;
