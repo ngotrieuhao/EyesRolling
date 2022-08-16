@@ -33,11 +33,13 @@ function playPause() {
     count = 1;
     audio.play();
     playPauseBtn.innerHTML = "&#10074;&#10074;";
+    playPauseBtn.style.fontSize = "22px";
   } else {
     count = 0;
 
     audio.pause();
     playPauseBtn.innerHTML = "&#9658;";
+    playPauseBtn.style.fontSize = "22px";
   }
 }
 
