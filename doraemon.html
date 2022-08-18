@@ -57,19 +57,13 @@
           <audio class="character--music" id="audio">
             <source src="./music/doraemon.mp3" type="audio/mpeg" />
           </audio>
-          <button
-            id="playPauseBtn"
-            style="font-size: 22px"
-            onclick="playPause()"
-          >
-            &#9658;
-          </button>
+          <button id="playPauseBtn" onclick="playPause()">&#9658;</button>
           <button class="character--mute" id="mute" onclick="mute()"></button>
         </div>
         <!-- Music Cartoon -->
       </div>
 
-      <div class="character">
+      <div class="character" id="characterdoraemon">
         <img src="./img/doraemon.png" alt="Doraemon" />
 
         <div class="wrapp__eyes">
